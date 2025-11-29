@@ -1,4 +1,29 @@
-#include "pch.h"
+#define WIN32_LEAN_AND_MEAN
+
+#include <Windows.h>
+#include <TlHelp32.h>
+#include <Psapi.h>
+
+#include <algorithm>
+#include <atomic>
+#include <chrono>
+#include <cstdint>
+#include <cstring>
+#include <fstream>
+#include <iomanip>
+#include <ios>
+#include <iostream>
+#include <map>
+#include <mutex>
+#include <set>
+#include <string>
+#include <thread>
+#include <vector>
+#include <sstream>
+#include <unordered_set>
+#include <unordered_map>
+
+DWORD WINAPI Run(LPVOID lpParam);
 
 using u8 = uint8_t;
 using u64 = uint64_t;
@@ -1078,4 +1103,5 @@ DWORD WINAPI Run(LPVOID) {
     }
 
     return 0;
+
 }
